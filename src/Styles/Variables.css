@@ -1,0 +1,22 @@
+:root {
+  /* Fonts */
+  --main-font-family: "Open Sans", sans-serif;
+  --accented-font-family: "Dancing Script", cursive;
+
+  /* Text-size */
+  --main-page-tille-size: clamp(4.6875rem, 2.9911rem + 8.4821vw, 10.625rem);
+  --main-page-slogan-size: clamp(2.8125rem, 2.1875rem + 3.125vw, 5rem);
+
+  /* Colors */
+  --accented-color: #2a373d;
+  --nav-color: #33444b;
+  --nav-link-color: aliceblue;
+  --button-text-color: aliceblue;
+  --button-bg-accented-color: #2a373d;
+  --button-hover-color: rgb(233, 174, 47);
+  --link-hover-color: rgb(233, 174, 47);
+  --link-active-color: chocolate;
+  --input-bg-color: #f0f0f0;
+  --select-bg-color: #f0f0f0;
+  --focus-border-color: #007bff;
+}

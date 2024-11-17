@@ -1,0 +1,71 @@
+.main-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.main-page-app-name {
+  font-family: var(--main-font-family);
+  font-size: clamp(4.6875rem, 2.9911rem + 8.4821vw, 10.625rem);
+  background-image: url("../Images/text-bg.jpg");
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--accented-color);
+  text-stroke: 2px var(--accented-color);
+  margin: 0;
+  padding: 10px;
+  position: relative;
+}
+
+.main-page-app-slogan {
+  font-family: var(--accented-font-family);
+  font-size: var(--main-page-slogan-size);
+  margin-bottom: 20px;
+  color: var(--button-bg-accented-color);
+}
+
+.button {
+  padding: 12px 24px;
+  text-transform: uppercase;
+  font-family: var(--main-font-family);
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: var(--nav-color);
+  border: none;
+  border-radius: 8px;
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: var(--button-bg-accented-color);
+  color: var(--button-hover-color);
+}
+
+.button:active {
+  box-shadow: none;
+}
+
+@media (max-width: 450px) and (orientation: portrait) {
+  .main-page-container {
+    gap: 10vh;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 950px) and (orientation: landscape) {
+  .main-page-container {
+    gap: 20vh;
+    min-height: 120vh;
+    overflow-y: auto;
+  }
+}
