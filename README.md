@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# Yummy Search - Recipe Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Yummy Search** is a web application for finding recipes. Users can search for recipes by ingredients, diet, cuisine, and intolerances, as well as view detailed information about the recipe, including ingredients and step-by-step instructions. It also offers the ability to find the perfect wine pairing for a dish.
 
-## Available Scripts
+## Technologies
 
-In the project directory, you can run:
+- **React**: Used to build the user interface with components and state management.
+- **React Router (useLocation, useNavigate)**: For navigating between pages (Home, Recipes, Wine).
+  - `useLocation`: A hook to get information about the current URL, which is used to activate or deactivate links depending on the current path.
+  - `useNavigate`: A hook to navigate programmatically, allowing you to change the path or move to another page, for example, when a button is clicked.
+- **useState and useEffect**: Hooks for managing state and handling side effects.
+- **useLayoutEffect**: Used for animations when the page loads.
+- **useCallback**: A hook used to optimize `fetch` requests to avoid re-creating them on every render.
+- **GSAP**: For animating elements on the page, such as text and button animations.
+- **Spoonacular API**: For retrieving recipe information and wine pairings.
 
-### `npm start`
+## Installation and Running
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the project, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+   ```bash
+   git clone https://github.com/yourusername/yummy-search.git
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory:
 
-### `npm run build`
+   ```bash
+   cd yummy-search
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the project:
 
-### `npm run eject`
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Go to [http://localhost:3000](http://localhost:3000) to view the app in action.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Functionality
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Home Page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+On the home page of the application, users will see a welcome message and a button that redirects them to the recipe page.
 
-## Learn More
+### Recipe Page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+On the recipe page, users can:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Search for recipes by ingredients, cuisine, diet, and intolerances.
+- View a list of recipes with filtering options.
+- Click on a recipe to view detailed information in a modal window.
 
-### Code Splitting
+### Wine Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+On this page, users can search for the perfect wine pairing for their chosen dish.
 
-### Analyzing the Bundle Size
+## Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **MainPage**: Displays the main screen with a welcome message and a button to go to the recipes page.
+- **Recipes**: A page where recipes are displayed with filtering options.
+- **RecipeDetailsModal**: A modal window that displays detailed information about the selected recipe.
+- **SearchForm**: A form for entering search parameters (e.g., ingredients, cuisine).
+- **WineInputQuery**: A form for entering a query for wine pairing with a dish.
 
-### Making a Progressive Web App
+## How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **useState**: Used for managing application state, such as storing the list of recipes, loading state, and errors.
+- **useEffect**: Used for loading data from APIs when the state changes.
+- **useLayoutEffect**: Applied for animating elements on the page when they are rendered, such as text and button animations on the first load.
+- **useCallback**: Applied to avoid unnecessary re-renders and re-executions of `fetch` requests by memoizing functions.
+- **fetch API**: Used for fetching data from external APIs (e.g., the Spoonacular API) to retrieve recipes and wine pairings.
+- **useLocation**: Used to track the current path and active links in the navigation.
+- **useNavigate**: Used for programmatic navigation between pages when interacting with UI elements (e.g., buttons).
 
-### Advanced Configuration
+## Planned Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Support for more advanced search filters.
+- Add the ability to save favorite recipes.
+- UI/UX improvements with additional animations and visual effects.
+- Mobile responsiveness and support for various devices.
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
-### `npm run build` fails to minify
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Aleksandr Barabanov
+
+## Contacts
+
+<div>
+  <a href="https://www.linkedin.com/in/aleksandr-barabanov/">
+    <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a> 
+  <a href="mailto:barabanov.codes@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+  </a>
+  <a href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-notifcenter">
+    <img src="https://img.shields.io/badge/indeed-003A9B?style=for-the-badge&logo=indeed&logoColor=white" alt="Indeed"/>
+  </a>
+  <a href="https://www.codewars.com/users/Aleksandr-Barabanov">
+    <img src="https://img.shields.io/badge/Codewars-B1361E?style=for-the-badge&logo=codewars&logoColor=grey" alt="Codewars"/>
+  </a>
+</div>
+
+© 2024 LocalSpark
