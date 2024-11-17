@@ -9,7 +9,7 @@ import RecipeDetailsModal from "../Components/RecipeDetailsModal";
 import SearchForm from "../Components/SearchForm";
 
 export default function Recipes() {
-  const apiKey = `0872a1deb55344119a0a4273ec68a3f8`;
+  const apiKey = process.env.REACT_APP_API_KEY;
   const [recipes, setRecipes] = useState([]);
   const [recipesNumber] = useState(6);
   const [searchedDish, setSearchedDish] = useState("chicken");
@@ -92,10 +92,8 @@ export default function Recipes() {
   };
 
   return (
-    <div className="container recipes-container">
-      <h3 className="recipes-section-title">
-        Find the Recipe You've Been Looking For
-      </h3>
+    <div className="container page-inner-container">
+      <h3 className="section-title">Find the Recipe You've Been Looking For</h3>
       <div>
         <SearchForm
           searchedDish={inputValue}

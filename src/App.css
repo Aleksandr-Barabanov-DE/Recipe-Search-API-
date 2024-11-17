@@ -88,3 +88,8 @@ li {
   align-items: center;
   padding: 10px;
 }
+
+.section-title {
+  font-family: var(--accented-font-family);
+  font-size: clamp(2.8125rem, 2.4554rem + 1.7857vw, 4.0625rem);
+}

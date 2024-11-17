@@ -3,12 +3,12 @@ import "../Styles/WinesPage.css";
 import React from "react";
 import WineInputQuery from "../Components/WineInputQuery";
 
-const apiKey = `0872a1deb55344119a0a4273ec68a3f8`;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 export default function App() {
   return (
-    <div className="container recipes-container">
-      <h1 className="recipes-section-title">Find the Perfect Wine</h1>
+    <div className="container page-inner-container">
+      <h1 className="section-title">Find the Perfect Wine</h1>
       <WineInputQuery apiKey={apiKey} />
     </div>
   );
