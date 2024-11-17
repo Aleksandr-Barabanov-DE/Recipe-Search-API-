@@ -9,7 +9,8 @@ import RecipeDetailsModal from "../Components/RecipeDetailsModal";
 import SearchForm from "../Components/SearchForm";
 
 export default function Recipes() {
-  const apiKey = process.env.REACT_APP_API_KEY;
+  const apiKey = "0872a1deb55344119a0a4273ec68a3f8";
+
   const [recipes, setRecipes] = useState([]);
   const [recipesNumber] = useState(6);
   const [searchedDish, setSearchedDish] = useState("chicken");

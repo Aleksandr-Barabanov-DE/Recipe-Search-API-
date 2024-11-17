@@ -3,7 +3,7 @@ import "../Styles/WinesPage.css";
 import React from "react";
 import WineInputQuery from "../Components/WineInputQuery";
 
-const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = "0872a1deb55344119a0a4273ec68a3f8";
 
 export default function App() {
   return (
