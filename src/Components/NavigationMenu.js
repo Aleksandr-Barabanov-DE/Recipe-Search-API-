@@ -1,7 +1,7 @@
 import "../Styles/Variables.css";
 import "../Styles/NavigationMenu.css";
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const links = [
   { to: "/MainPage", label: "Main" },
@@ -10,13 +10,9 @@ const links = [
 ];
 
 export default function NavigationMenu() {
-  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  const getLinkClass = (path) =>
-    location.pathname === path ? "active navigation-link" : "navigation-link";
 
   return (
     <nav className="navigation-menu">
@@ -29,9 +25,14 @@ export default function NavigationMenu() {
       <ul className={`menu__list ${isMenuOpen ? "active" : ""}`}>
         {links.map(({ to, label }) => (
           <li key={to} onClick={toggleMenu}>
-            <Link className={getLinkClass(to)} to={to}>
+            <NavLink
+              to={to}
+              className={({ isActive }) =>
+                isActive ? "active navigation-link" : "navigation-link"
+              }
+            >
               {label}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
