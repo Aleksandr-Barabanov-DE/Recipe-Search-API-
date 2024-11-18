@@ -5,7 +5,7 @@
 ## Technologies
 
 - **React**: Used to build the user interface with components and state management.
-- **React Router (useLocation, useNavigate)**: For navigating between pages (Home, Recipes, Wine).
+- **React Router (useNavigate, NavLink)**: For navigating between pages (Home, Recipes, Wine).
   - `useLocation`: A hook to get information about the current URL, which is used to activate or deactivate links depending on the current path.
   - `useNavigate`: A hook to navigate programmatically, allowing you to change the path or move to another page, for example, when a button is clicked.
 - **useState and useEffect**: Hooks for managing state and handling side effects.
@@ -77,7 +77,7 @@ On this page, users can search for the perfect wine pairing for their chosen dis
 - **useLayoutEffect**: Applied for animating elements on the page when they are rendered, such as text and button animations on the first load.
 - **useCallback**: Applied to avoid unnecessary re-renders and re-executions of `fetch` requests by memoizing functions.
 - **fetch API**: Used for fetching data from external APIs (e.g., the Spoonacular API) to retrieve recipes and wine pairings.
-- **useLocation**: Used to track the current path and active links in the navigation.
+- **NavLink**: Used to track the current path and active links in the navigation.
 - **useNavigate**: Used for programmatic navigation between pages when interacting with UI elements (e.g., buttons).
 
 ## Planned Improvements
