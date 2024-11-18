@@ -1,31 +1,29 @@
 import React from "react";
+import Select from "../Components/Select";
 
 const DietSelect = ({ selectedDiet, handleDietChange }) => {
+  const dietOptions = [
+    { value: "glutenFree", label: "Gluten Free" },
+    { value: "ketogenic", label: "Ketogenic" },
+    { value: "vegetarian", label: "Vegetarian" },
+    { value: "lactoVegetarian", label: "Lacto-Vegetarian" },
+    { value: "ovoVegetarian", label: "Ovo-Vegetarian" },
+    { value: "vegan", label: "Vegan" },
+    { value: "pescetarian", label: "Pescetarian" },
+    { value: "paleo", label: "Paleo" },
+    { value: "primal", label: "Primal" },
+    { value: "lowFodmap", label: "Low FODMAP" },
+    { value: "whole30", label: "Whole30" },
+  ];
+
   return (
-    <div>
-      <label htmlFor="diet" className="visually-hidden">
-        Choose a Diet:
-      </label>
-      <select
-        id="diet"
-        value={selectedDiet}
-        onChange={handleDietChange}
-        aria-label="Choose a Diet"
-      >
-        <option value="">-- Select Diet --</option>
-        <option value="glutenFree">Gluten Free</option>
-        <option value="ketogenic">Ketogenic</option>
-        <option value="vegetarian">Vegetarian</option>
-        <option value="lactoVegetarian">Lacto-Vegetarian</option>
-        <option value="ovoVegetarian">Ovo-Vegetarian</option>
-        <option value="vegan">Vegan</option>
-        <option value="pescetarian">Pescetarian</option>
-        <option value="paleo">Paleo</option>
-        <option value="primal">Primal</option>
-        <option value="lowFodmap">Low FODMAP</option>
-        <option value="whole30">Whole30</option>
-      </select>
-    </div>
+    <Select
+      label="Diet"
+      value={selectedDiet}
+      onChange={handleDietChange}
+      options={dietOptions}
+      id="diet"
+    />
   );
 };
 

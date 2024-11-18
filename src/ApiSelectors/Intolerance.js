@@ -1,35 +1,33 @@
 import React from "react";
+import Select from "../Components/Select";
 
 const IntoleranceSelect = ({
   selectedIntolerance,
   handleIntoleranceChange,
 }) => {
+  const intoleranceOptions = [
+    { value: "dairy", label: "Dairy" },
+    { value: "egg", label: "Egg" },
+    { value: "gluten", label: "Gluten" },
+    { value: "grain", label: "Grain" },
+    { value: "peanut", label: "Peanut" },
+    { value: "seafood", label: "Seafood" },
+    { value: "sesame", label: "Sesame" },
+    { value: "shellfish", label: "Shellfish" },
+    { value: "soy", label: "Soy" },
+    { value: "sulfite", label: "Sulfite" },
+    { value: "treeNut", label: "Tree Nut" },
+    { value: "wheat", label: "Wheat" },
+  ];
+
   return (
-    <div>
-      <label htmlFor="diet" className="visually-hidden">
-        Intolerance:
-      </label>
-      <select
-        id="diet"
-        value={selectedIntolerance}
-        onChange={handleIntoleranceChange}
-        aria-label="Choose Intolerance"
-      >
-        <option value="">-- Select Inrolerance --</option>
-        <option value="dairy">Diary</option>
-        <option value="egg">Egg</option>
-        <option value="gluten">Gluten</option>
-        <option value="grain">Grain</option>
-        <option value="peanut">Peanut</option>
-        <option value="seafood">Seafood</option>
-        <option value="sesame">Sesame</option>
-        <option value="shellfish">Shellfish</option>
-        <option value="soy">Soy</option>
-        <option value="sulfite">Sulfite</option>
-        <option value="treeNut">Tree Nut</option>
-        <option value="wheat">Wheat</option>
-      </select>
-    </div>
+    <Select
+      label="Intolerance"
+      value={selectedIntolerance}
+      onChange={handleIntoleranceChange}
+      options={intoleranceOptions}
+      id="intolerance"
+    />
   );
 };
 
