@@ -6,7 +6,7 @@
 
 - **React**: Used to build the user interface with components and state management.
 - **React Router (useNavigate, NavLink)**: For navigating between pages (Home, Recipes, Wine).
-  - `useLocation`: A hook to get information about the current URL, which is used to activate or deactivate links depending on the current path.
+  - `NavLink`: Used to get information about the current URL, which is used to activate or deactivate links depending on the current path.
   - `useNavigate`: A hook to navigate programmatically, allowing you to change the path or move to another page, for example, when a button is clicked.
 - **useState and useEffect**: Hooks for managing state and handling side effects.
 - **useLayoutEffect**: Used for animations when the page loads.
